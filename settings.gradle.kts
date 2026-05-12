@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ClimaSyncApp"
+rootProject.name = "SentryApp"
 include(":app")
  

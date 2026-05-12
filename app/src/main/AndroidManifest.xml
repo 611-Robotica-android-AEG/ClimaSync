@@ -2,15 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ==================== PERMISOS BLUETOOTH ==================== -->
-
-    <!-- Bluetooth clásico (todas las versiones) -->
+    <!-- Bluetooth clásico -->
     <uses-permission android:name="android.permission.BLUETOOTH"
         android:maxSdkVersion="30" />
-    <uses-permission
-        android:name="android.permission.BLUETOOTH_ADMIN"
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
         android:maxSdkVersion="30" />
-    <!-- Bluetooth moderno (Android 12+ / API 31+) -->
+
+    <!-- Bluetooth moderno (Android 12+) -->
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
         tools:targetApi="s" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"
@@ -18,21 +16,14 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"
         tools:targetApi="s" />
 
-    <!-- Ubicación requerida para escaneo BT en Android 6–11 -->
+    <!-- Ubicación para Android 6–11 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
         android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"
         android:maxSdkVersion="30" />
 
-    <!-- Hardware Bluetooth -->
-    <uses-feature
-        android:name="android.hardware.bluetooth"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.bluetooth_le"
-        android:required="false" />
-
-    <!-- ============================================================ -->
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -46,7 +37,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".SentryActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ClimaSyncApp">
